@@ -599,10 +599,10 @@
 	</div>
 
         <div class="footer">
-            <p>© <?php echo date("Y"); ?> ShePays Financial Services Limited. All rights reserved.</p>
+            <p>© <span id="current-year"></span> ShePays Financial Services Limited. All rights reserved.</p>
             <p>
                 <a href="https://shepays.com/" target="_blank">🌐 Visit our website</a> | 
-                <a href="https://shepays.com/privacy-policy" target="_blank">🔒 Privacy Policy</a> |
+                <a href="pp.html" target="_blank">🔒 Privacy Policy</a> |
                 <a href="mailto:legal@shepays.com">📧 Contact Legal Team</a>
             </p>
         </div>
@@ -611,6 +611,8 @@
     </div>
 
     <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         // Display current URL
         document.getElementById('current-url').textContent = window.location.href;
 
